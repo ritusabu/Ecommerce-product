@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam&family=Noto+Sans&display=swap');
+
+body{background: #fce7eaaf;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #fceced, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+}
+.form{
+width: 800px;
+height: max-content;
+margin: 0px auto;
+background-color: white;
+box-shadow: 5px 4px 14px 7px rgb(0 0 0 / 20%);
+/* font-family: 'Noto', 'Sans'; */
+font-family: 'Kufam', cursive;
+padding: 40px;
+
+}
+
+/* .form img{
+    object-fit:  cover;
+    width: 400px;
+    height: 180px; */
+
+.welcome-header{
+font-size: 25px;
+padding-top: 20px;
+text-align: center;
+margin-bottom: 15px;
+
+}
+.welcome-header a{
+    text-decoration: none;
+color: black;
+box-shadow: 4px 4px 12px 0px #444444ab;
+background-color:orangered;
+padding: 5px 10px;
+font-size: 17px;
+border-radius: 3px;
+
+}
+.form input{
+    padding: 16px 60px;
+    outline: none;
+margin-left: 90px;
+margin-right: 40px;
+
+margin-top: 60px;
+margin-bottom: -100px;
+
+    
+   
+
+}
+.regi-input{
+margin-top: 20px;
+
+}
+/* .midlinks{
+    font-size: 18px;
+    padding-right: 20px;
+    padding-left: 30px;
+}
+.midlinks a{
+    text-decoration: none;
+    color: blue;
+} */
+.submitBottom .continue{
+    font-size: 19px;
+    text-align: center;
+    padding: 7px 30px;
+    margin-top: 20px;
+    margin-left: 100px;
+    background-color: rgb(248, 14, 61);
+    outline: none;
+    
+    border-top-right-radius: 30px;
+    
+}
+/* .register{
+    display: flex;
+} */
+.one{
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.two button{
+    font-size: 19px;    
+    padding: 16px 40px;
+    background-color: rgb(248, 14, 61);
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+    outline: none;
+    border: none;
+   
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+margin-right: 200px;
+margin-left: 270px;
+
+}

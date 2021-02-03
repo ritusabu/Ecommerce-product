@@ -1,0 +1,38 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{% static 'authln/login.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="" class="form">
+        {% csrf_token %}
+        <img width="300px" height="200px" src="https://media.istockphoto.com/photos/young-beautiful-girl-is-possing-with-her-shopping-bags-in-a-boutique-picture-id691280118?b=1&k=6&m=691280118&s=612x612&w=0&h=56vc7wPnxBoSVwALxR3MzNuD8JOp-QrdeozVtT28StI=" alt="">
+       <div class="welcome-header">
+          <a href="{% url 'authln' %}"> <b> Login </b></a>
+          <!-- <span class="welcome-header-small">or</span>  -->
+          
+       </div>
+       
+    <input type="text"  placeholder=" Email" name="email">
+    <input type="password" placeholder="password" name="password">
+    <div class="midlinks">
+        By continuing, I agree to the <a href="">Terms of Use</a> & <a href="">Privacy Policy</a> 
+    </div>
+    <div class="submitBottom">
+        <button class="continue" type="submit">Continue</button>
+    </div>
+    <div class="register">
+        <div class="one">
+   if you are new here then</div>
+   <div class="two">
+    <button  type="submit"><a href="{% url 'register'  %}">
+        Register</a></button>
+   </div>
+</form>
+</body>
+</html>

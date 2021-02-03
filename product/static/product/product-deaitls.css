@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam&family=Noto+Sans&display=swap');
+
+*{
+    font-family: 'Kufam', cursive;
+}
+.detail{
+    display: flex;
+    margin: 40px;
+}
+.left  img{
+    width: 400px;
+    height: 500px;
+   object-fit: cover;
+   
+
+}
+.left{
+    display: flex;
+}
+.left #result{
+    background-color: hotpink;
+    width: 400px;
+    height: 500px;
+}
+.review-containt {
+    display: none;
+}
+.show {
+    display: block;
+}
+.review-data{
+    border:1px solid gray;
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+.right .review{
+    width: max-content;
+    color:rgba(24, 23, 23, 0.712);
+    border: 1px solid rgba(226, 220, 220, 0.877);
+    padding: 5px 15px;
+    margin-top: 20px;
+}
+body{
+    font-family:"Noto Sans" ;
+}
+.right{
+    margin-left: 40px;
+
+}
+.right .str-line{
+    width: 400px;
+    height: 1px;
+    color: gray;
+    background-color: gray;
+    margin-top: 10px;
+}
+.right .name {
+font-size: 30px;
+font-weight: bold;
+}
+.right .disc{
+    font-size: 15px;
+    color: black;
+    margin-top: 20px;
+}
+.right .discount{
+    color: orangered;
+    font-weight: bold;
+    font-size: 20px;
+
+
+}
+.middle-data{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+.right .line{
+    color: green;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 20px;
+
+}
+.middle-data .price{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.middle-data .actual-price{
+    text-decoration: line-through;
+    color: gray;
+}
+button{
+    padding: 15px 50px;
+    outline: none;
+    border: none;
+}
+.buy-btn{
+    font-weight: bold;
+    color: white;
+    background-color: rgb(15, 170, 15);
+    border-radius: 6px;
+}
+.buy-btn:hover{
+    background-color: green;
+}
+.add-btn{
+font-weight: bold;
+margin-left: 20px;
+background-color: white;
+
+}
+.add-btn:hover{
+    outline: 1px solid black;
+}
+.img-zoom-container {
+    position: relative;
+  }
+  
+  .img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 90px;
+    height: 90px;
+  }
+  .img-zoom-result {
+    border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    width: 200px;
+    height: 200px;
+  }
+ h3{
+      color: black;
+  }
+ 

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam&family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+.carousel-item {
+    height: 400px;
+    
+    margin-top: 10px;
+ 
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: 500px;
+    padding: 0px;
+    margin: 0px;
+
+    margin: 20px;
+    box-shadow: 1px 4px 13px 0px #00000017;
+}
+.card .card-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.card img{
+     
+     height: 57%;
+     width: 100%;
+     transition: all .2s;
+     object-fit: fill;
+     object-position: center;
+
+}
+body{
+    font-family: 'Kufam', cursive;
+    
+}
+.card p {
+    color: #6f6e6e;
+}
+.card h6{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+}
+.offer{
+    color: rgba(69, 69, 248, 0.856);
+}
+.card-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add-to-cart {
+    margin-top: 20px;
+    width: 100%;
+}
+.main-card{
+    display: flex;
+    justify-content: center;
+}
+ .bg-costum {
+    background-color: white;
+}
+.navbar{
+    box-shadow: 3px 1px 5px 1px #dee2e6;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+}
+.nav-item, .navbar-brand{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navbar-brand{
+    font-family: 'Redressed', cursive;
+    text-transform: none;
+}
+.nav-item{
+    padding-right: 20px;
+    font-size: 15px;
+    position: relative;
+}
+.nav-item::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 0%;
+    height:3px;
+    transition: all .3s;
+    background-color: rgba(68, 66, 66, 0.212);;
+}
+.nav-item:hover::before {
+    width: 100%;
+}
+.search-form{
+    position: relative;
+    width: 300px;
+  
+
+    
+}
+.shop-icon {
+ width: 100px; 
+ height: 100px;  
+ 
+position: relative;
+} 
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+    position: absolute;
+    top: 1.5px;
+    right: 45px;
+}
+.search-form i{
+    color:  rgba(68, 66, 66, 0.212);
+    position: absolute;
+    top: 6px;
+    left: 20px;
+   
+}
+.search-form input {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.082);
+    padding: 5px 5px;
+    border: none;
+    padding-left: 45px;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+}
+.search-form input:focus + i{
+   color: rgba(96, 96, 240, 0.788);
+}
+
+.profile-form i{
+    font-size: 25px;
+    margin-right: 15px;
+    color: #578be0;
+    cursor: pointer;
+    transition: all .5s ease;
+    position: relative;
+
+    
+   
+}
+.profile-form{
+    margin-left: 40px;
+    margin-right: 20px;
+
+}
+.profile-form i:hover{
+    color: black;
+}
+.content{
+padding: 30px;
+margin-bottom: 5px;
+color: white;
+}
+.content a{
+    text-decoration: dotted;
+    color: white;
+}
+.col-lg-4 {
+    text-align: center;
+}
+ .col-3 img{
+   transition: trasform .2s;
+}
+ .img-fluid{
+    transition: trasform .1.5s;
+}
+.col-3 img:hover{
+   transform: scale(1.1);
+}
+ .img-fluid:hover{
+    transform: scale(1.1);
+}
+
+.head{
+    text-align: center;
+     margin-top: 40px ;
+}
+
+@media(max-width:800px){
+    .main-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+        
+    
+    .main-card .card{
+        flex-direction: column;
+    
+        width: 50%;
+        height: 500px;
+        margin-top: 2px;
+
+    }
+    .head{
+        margin-top: 10px;
+        padding: 0px;
+        
+    } 
+    .resp{
+        position: relative;
+    } 
+    .head{
+        position: absolute;
+        bottom: 25px;
+       
+    }
+    .row{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .row .col{
+        padding: 5px 15px;
+    }
+    .row .col-3 {
+        margin-right: 60px;
+        margin-left: 0px;
+
+        height: 200px;
+    }
+    .img-fluid{
+        width: 70%;
+        margin-bottom: 15px;
+    }
+    
+    }
+      
+    

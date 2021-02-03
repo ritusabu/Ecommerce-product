@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam&family=Noto+Sans&display=swap');
+
+*{
+    font-family: 'Kufam', cursive;
+}
+body{
+    font-family:"Noto Sans" ;
+}
+
+.cart{
+    height: 343px;
+    width: 217px;
+    margin: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.329);
+    padding-bottom: 20px;
+}
+.cart img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.name{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+   
+}
+.name a{
+   text-transform: none;
+   color: black;
+   border: none;
+   
+}
+.bottom{
+    display: flex;
+    align-items: center;
+ 
+}
+.actaul-price{
+    color: gray;
+    text-decoration: line-through;
+    margin-right: 4px;
+}
+
+.price {
+    margin-right: 10px;
+    font-weight: bold;
+}
+.cart .cart-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding: 0px 3px;
+}
+.discount {
+    color: orangered;
+    font-weight: bold;
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    gap: 10px;
+}
+.cart a{
+    text-decoration: none;
+    color: black;
+}
+@media(max-width:800px){
+   .cart{
+       width: 100%;
+       height: max-content;
+   }
+}

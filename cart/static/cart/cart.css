@@ -1,0 +1,118 @@
+body{background: #fce7eaaf;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #fceced, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container{
+    display: flex;
+}
+.cart{
+    width: 40%;
+    background-color: white;
+    padding: 0px 30px;
+    border: 1px solid rgba(0,0,0,.125);}
+    
+.table{
+    width: 100%;
+border: none; 
+background-color: white; 
+
+}
+.cart{
+    margin-top: 20px;
+}
+.cart h4{
+    color: gray;
+    padding: 18px;
+  
+    border-bottom: 1px solid rgba(0,0,0,.125); ;
+}
+.cart .group{
+    position: relative;
+}
+.cart form h5{
+font-weight: 500;
+padding: 10px;
+}
+.cart form i{
+    color: blue;
+    position: absolute;
+    left: 5px;
+    bottom: 15px;
+    font-size: 19px;
+
+
+    
+    
+}
+.cart input{
+   padding: 10px 25px;
+    border:1px solid gainsboro
+    
+}
+th, td{
+    font-size: 16px;
+    font-weight: 600;
+}
+.green{
+    color: green;
+}
+ .total-amount td, .total-amount th{
+    font-size: 20px;
+}
+.order-button button{
+    background-color: rgb(241, 72, 11);
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: rgba(19, 18, 18, 0.788);
+   text-align: center;
+   margin-bottom: 20px;
+}
+ .row img{
+    height: 140px;
+    width: 100px;
+    object-fit: fill;
+    margin-right: 16px;
+}
+.order {
+    flex: 1;
+}
+.remove button{
+  
+        border: 2px solid;
+        outline: none;
+        background-color: tra;
+        background-color: transparent;
+      
+
+}
+.remove button:hover {
+    color: blue;
+    
+}
+.order-button a{
+    text-decoration: none;
+    
+}
+::selection{
+    background-color: cadetblue;
+    color:darkblue;
+}
+
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+    position: absolute;
+    right: 45px;
+    top: 7px;
+}
+.profile-form i {
+    font-size: 25px;
+    margin-right: 15px;
+    
+    cursor: pointer;
+    transition: all .5s ease;
+    position: relative;
+}

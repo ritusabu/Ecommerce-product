@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'authln/register.css' %}">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+
+    <div class="">
+        <form class="col s12 form " method="POST" action="" class="form">
+            {% csrf_token %}
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="name" type="text" class="validate"  name="name">
+                    <label for="name">Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="address" type="text" class="validate" name="address">
+                    <label for="address">Address</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="mobile" type="number" class="validate"  name="mobile" >
+                    <label for="mobile">Mobile No.</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate" name="email">
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password" class="validate"  name="password">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="pcassword" type="password" class="validate">
+                    <label for="pcassword">Conform password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="city" type="text" class="validate" \ name="city">
+                    <label for="city">City</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="state" type="text" class="validate" name="state">
+                    <label for="state">State</label>
+                </div>
+            </div>
+
+
+
+            <div class="register">
+                <div class="two">
+                    <button type="submit">Register</button></a>
+                    <!-- <span class="welcome-header-small">or</span>  -->
+                </div>
+            </div>
+            <div class="welcome-header">if you have already account then
+                <a href="{% url 'authln' %}"> </b>Login</a>
+
+            </div>
+    </div>
+    </form>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

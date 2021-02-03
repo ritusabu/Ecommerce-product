@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-costum " style="background-color: white; font-family: 'Kufam', cursive">
+    <a class="navbar-brand" href="{% url 'home' %}">Rits Store</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ml-4 mr-auto mt-2 mt-lg-0">
+
+            {% for i in catagory %}
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'cart' cat_name=i.name %}">{{i.name}} <span
+                        class="sr-only">(current)</span></a>
+            </li>
+
+            {% endfor %}
+
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">Offers</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    {% for  o in offer  %}
+                    <a class="dropdown-item" href="{% url 'offer' off_id=o.id %}">{{o.name}}</a>
+                    {% endfor %}
+                </div>
+            </li>
+
+        </ul>
+        <form class="search-form" method="GET" action="{% url 'search' %}">
+
+            <input class="" type="text" placeholder="Search products" name="name">
+            <i class="fa fa-search" aria-hidden="true"> </i>
+        </form>
+
+        {% if request.user.is_authenticated %}
+
+
+        <div class="profile-form" style="
+        display: flex; color: #578be0;
+    ">
+            <a href="{% url 'logout' %}">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+
+            </a>
+
+            <div class="shop-icon" style="
+        position: relative;
+        width: 30px;
+        height: 30px;
+        /* background: blue; */
+    ">
+
+                <a href="{% url 'payment' %}">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+
+                <span class="badge badge-pill badge-danger" style="
+        position: absolute;
+        right: -9px;
+        top: -3px;
+    ">
+
+                    {% if shop_list is None %}
+                    0
+                    {% else %}
+                    {{shop_list.products.count}}
+                    {% endif %}
+
+
+                </span>
+
+            </div>
+<a href="{% url 'order' %}">
+            <i class="fa fa-list" aria-hidden="true" style="
+    margin-left: 23px;
+    margin-right: 0px;
+"></i></a>
+
+
+            {% else %}
+
+            <div class="profile-form">
+                <a href="{% url 'authln' %}">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </a>
+
+            </div>
+            {% endif %}
+
+        </div>
+</nav>

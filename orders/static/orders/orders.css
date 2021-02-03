@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam&family=Noto+Sans&display=swap');
+
+* {
+    font-family: "Noto Sans";
+}
+.card{
+    width: 80%;
+    height: 30%;
+}
+.row img{
+    width: 16%;
+    height: 30%;
+}
+.rating, .discount{
+    color: gray;
+    font-size: 16px;
+    margin-right: 5px;
+}
+.rating i, .discount i{
+    color: rgb(231, 112, 14);
+}
+.price ,.name{
+    font-weight: bold;
+    font-weight: 600;
+}
+.name{
+    font-size: 20px;
+}
+.price{
+    font-size: 19px;
+}
+.category{
+    font-size: 13px;
+}
+.custumer-name{
+    font-weight: 500;
+
+}
+.phone b, .delivery-time{
+    font-weight: 600;
+}
+.delivery-status{
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kufam&family=Noto+Sans&display=swap');
+
+nav {
+    font-family: "Noto Sans";
+}
+.contact form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+    animation: right-image 3s ease;
+    
+
+}
+
+.contact{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+     
+}
+.contact *{
+    font-family: 'Redressed', cursive; 
+
+}
+
+
+.contact input[type="text"],.contact input[type="email"],.contact textarea{
+    margin-bottom: 15px;
+    padding:10px 20px;
+    resize: none;
+    width: 200px;
+    outline: none;
+    border: none;
+    background-color:rgba(12, 12, 12, 0.767);
+    font-size: 15px;
+
+    
+}
+.contact input::placeholder, .contact textarea::placeholder {
+    color: rgba(255, 255, 255, 0.664);
+}
+.contact input[type="submit"]{
+    font-size:17px ;
+    font-weight: bold;
+    width: max-content;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-right: 30%;
+    padding:10px 20px;
+    outline: none;
+    border: none;
+    background-color: rgb(44, 44, 121);
+    color: white;
+    border-radius:0px 15px 0px 15px ;
+
+}
+.contact .feild{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+.contact label{
+    margin: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contact form h1{
+   text-align: end; 
+   margin-right: 20%;
+   margin-top: 30px;
+}
+.contact .left {
+    height: 400px;
+    width: 400px;
+    background-image: url("https://img.freepik.com/free-vector/woman-at-computer-illustration_33099-601.jpg");
+    background-size: cover;
+    margin-right: 10%;
+
+    animation: left-image 3s ease;
+}
+@keyframes left-image{
+    0%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes right-image{
+    0%{
+        transform: translateX(100%);
+
+    }
+    50%{
+        transform: translateY(-10%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+/* .box {
+
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: all .3s;
+    animation: box-img 4s ease;
+
+  
+} */
+/* @keyframes box-img{
+    25%{
+        transform: translateX(100px);
+
+    }50%{
+        transform: translateX(100px) translateY(200px);
+
+    }
+    75%{
+        transform: translateX(0px) translateY(200px);
+    }
+    100%{
+        transform: translateX(0px)  translateY(0px);
+    }
+} */
