@@ -10,21 +10,19 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!-- MY CSS -->
-
-
 <link rel="stylesheet" href="{% static 'product/cart.css' %}">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{% static 'product/home.css' %}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
 </head>
 <body>
-  
   {% include 'product/navbar.html' %}
 
   <div class="grid">
-    
     {% if products|length == 0 %}
     <h1 style="
     margin-top: 77px;
@@ -35,12 +33,12 @@
 
    {% for c in products  %}
   
-    <div class="cart">
+    <div class="cart" style="height: max-content;">
       <a href="{% url 'detail' id=c.id %}">
       <img src="{{c.image}}" alt="">
-      <div class="name">{{c.name}}</div>
+      <div class="name" style="padding: 5px;">{{c.name}}</div>
       <div class="cart-bottom">
-        <div class="bottom">
+        <div class="bottom" style="font-size: 14px;">
         <div class="price">₹.{{c.discounted_price}} </div>
         
         <div class="actaul-price">₹{{c.price}}</div>

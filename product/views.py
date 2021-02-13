@@ -58,10 +58,16 @@ def cart(request,cat_name):
 def detail(request,id):
     p= Products.objects.get(id=id)
     c=Category.objects.all()
-    r= Review.objects.filter(product__id=id)
+    r= Review.objects.filter(product__id=id).order_by("-pk")
     o= Offer.objects.all()
     u= request.user.username
     s= ShoppingList.objects.filter(customer__email__exact =u)
+
+
+    review = request.GET.get("input-review","")
+    if review != "":
+        rr = Review(messege = review,product = p)
+        rr.save()
 
    
     
@@ -69,9 +75,22 @@ def detail(request,id):
         s = s[0]
     else:
         s = None
-        
+
+    a= {
+            "id":p.pk,
+            "name":p.name,
+            "price":p.price,
+            "image":p.image.url,
+            "discount":p.discount,
+            "discounted_price":(p.price*p.discount)/100,
+            
+        }
+    
+
+
+
     d={
-        "p":p,
+        "p":a,
         "catagory":c,
         "review":r,
         "offer":o,
@@ -82,7 +101,7 @@ def detail(request,id):
 def offer(request, off_id):
     catagory=Category.objects.all()
     off = Offer.objects.all()
-    o = Offer.objects.get(id = off_id) # muje off_id woh offer do 
+    o = Offer.objects.get(id=off_id) # muje off_id woh offer do 
     p = o.products.all() # many to many 
     
 
@@ -114,10 +133,22 @@ def search(request):
     p= Products.objects.filter(name__contains=t) # list of products jiske name me d ho
     category= Category.objects.all()
     off = Offer.objects.all()
-    print(p)
+    a=[]
+    
+    for w in p:
+        a.append({
+            "id":w.pk,
+            "name":w.name,
+            "price":w.price,
+            "image":w.image.url,
+            "discount":w.discount,
+            "discounted_price":(w.price*w.discount)/100,
+            
+        })
+
     context={
-        "products":p,
-        "catasgory":category,
+        "products":a,
+        "catagory":category,
         "offer":off
 
     }

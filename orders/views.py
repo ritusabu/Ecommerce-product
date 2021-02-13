@@ -9,12 +9,13 @@ def order(request):
     # find a order of customer name contains r
     c = Custumer.objects.filter(email__exact= request.user.username)
     o= Products.objects.all()
-    porder = Order.objects.filter(custumer__email__contains=c[0].email)
+    porder = Order.objects.filter(custumer__email__contains=c[0].email).order_by("-pk")
    
     u= request.user.username
     s= ShoppingList.objects.filter(customer__email__exact =u)
-   
 
+   
+   
     # a = [1,23,4,54,5]
     # a[0] = 1
     # a[1] = 23

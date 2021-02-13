@@ -19,9 +19,10 @@ def payment(request):
 
 
     s= ShoppingList.objects.filter(customer__email__exact =u)
-    # s = []
-    # s[0] ? error list oout of bounds
-    
+    print(len(s))
+   
+    if len(s) == 0:
+        return redirect("/login")
     
         # yaha pe shoping list banai
         # 1 find the cutsomer  current loging he krke
@@ -57,6 +58,7 @@ def payment(request):
 
             )
             o.save()
+        s[0].products.clear()
         return redirect('/order')
 
 
@@ -85,11 +87,12 @@ def addCart(request, id):
     
 
     # is s is none then create else 
-    if s[0]!=0:
+    if len(s) == 0:
+        return redirect("/login")
         
-        class ShoppingListCreateView(ShoppingList):
-            model =ShoppingList
-            cart = "cart"
+        # class ShoppingListCreateView(ShoppingList):
+        #     model =ShoppingList
+        #     cart = "cart"
         
         
     else:
