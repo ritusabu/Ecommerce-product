@@ -23,20 +23,24 @@
 
 
 {% for p in  products %}
-<a href="">
+
+<a href="{% url 'detail' id=p.id %}" style="text-decoration: none;color: black;">
     <div class="cart">
-        <img src="{{p.image.url}}" alt="">
+        
+        <img src="{{p.image}}" alt="">
         <div class="name">{{p.name}}</div>
         <div class="cart-bottom">
             <div class="bottom">
-                <div class="price">{{p.price}} </div>
+                <div class="price">₹{{p.discounted_price}}</div>
 
-                <div class="actaul-price">₹23</div>
+                <div class="actaul-price">₹{{p.price}}</div>
+            
+            <div class="discount">{{p.discount}}% OFF</div>
             </div>
-            <div class="discount">{{p.discount}} OFF</div>
         </div>
     </div>
-</a>
+    </a>
+
 {% endfor %}
     
     

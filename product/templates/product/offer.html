@@ -22,10 +22,10 @@
 
 
 {% for p in  products %}
-<a href="{% url 'detail' off_id=p.detail %}">
+<a href="{% url 'detail' id=p.id %}" style="text-decoration: none;color: black;">
     <div class="cart">
         
-        <img src="{{p.image}}" alt="">>
+        <img src="{{p.image}}" alt="">
         <div class="name">{{p.name}}</div>
         <div class="cart-bottom">
             <div class="bottom">

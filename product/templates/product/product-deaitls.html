@@ -28,15 +28,15 @@
     
     <div class="detail">
         <div class="left img-zoom-container">
-            <img id="image" src="{{p.image.url}}" alt="">
+            <img id="image" src="{{p.image}}" alt="">
             <div id="result" class="img-zoom-result"></div>
         </div>
         <div class="right">
             <div class="name">{{p.name}}</div>
             <div class="str-line"></div>
             <div class="middle-data">
-                <div class="price">₹{{p.discounted_price}}</div>
-                <div class="actual-price">₹{{p.price}}</div>
+                <div class="price">₹{{p.price}}</div>
+                <div class="actual-price">₹{{p.discounted_price}}</div>
                 <div class="discount"> ({{p.discount}}% OFF)</div>
             </div>
 
@@ -54,6 +54,11 @@
             </div>
             <div class="disc">{{p.description|safe}}</div>
 
+            <form action="" method="get" class="add-review">
+                <input type="text" name="input-review" >
+                <input type="submit" value="ADD REVIEW">
+             </form>
+
 
             <div class="review">{{review.count}} Review</div>
             <div class="review-containt">
@@ -62,7 +67,7 @@
                 </div>
                 {% endfor %}
             </div>
-
+            
         </div>
     </div>
    

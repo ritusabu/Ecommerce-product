@@ -26,8 +26,8 @@
 
         <div class="order">
             {% for product in shop_list.products.all  %}
-            <div class="card" style="width: 80%;height: 140px;">
-               <div class="row align-items-center" style="width: 80%;height: 140px;">
+            <div class="card" style="width: 80%;height: max-content;">
+               <div class="row align-items-center">
                    <a href="{% url 'detail' id=product.id %}"> <img src="{{product.image.url}}" alt="">
                    </a>
                     <div class="col ">
@@ -48,7 +48,7 @@
                     </div>
                     <a href="{% url 'removeCard' id=product.id %}">
                     <div class="col-1 remove">
-                        <button type="submit">Remove</button>
+                        <button type="submit" style="margin-right: 56px;">Remove</button>
                     </div>
                     </a>
 
@@ -91,11 +91,13 @@
                             </tr>
                         </tbody>
                     </table>
+                    <a href="{% url 'order' %}">
                     <div class="order-button">
                        
                              <button type="submit"> PLACE ORDER</button>
                         
                     </div>
+                    </a>
             </form>
         </div>
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kufam&family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
 .carousel-item {
     height: 400px;
     
@@ -76,8 +77,13 @@ body{
     text-transform: uppercase;
 }
 .navbar-brand{
-    font-family: 'Redressed', cursive;
+    font-family: 'Rouge Script', cursive;
     text-transform: none;
+    background: rgb(0,11,36);
+    background: linear-gradient(90deg, rgba(0,11,36,1) 0%, rgba(16,0,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 32px;
 }
 .nav-item{
     padding-right: 20px;

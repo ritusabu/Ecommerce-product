@@ -8,7 +8,7 @@ body{
 }
 
 .cart{
-    height: 343px;
+    height: max-content;
     width: 217px;
     margin: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.329);
